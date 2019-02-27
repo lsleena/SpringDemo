@@ -12,12 +12,15 @@ public class App {
 
     public static void main( String[] args ) {
 
+        // Using type attribute
+
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext
                 ("constructor.type4/appcontext.xml");
 
         AmountBean bean = (AmountBean)context.getBean("amountBean");
         bean.displayValue();
 
+        // Using index attribute
 
         ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext
                 ("constructor.type4/appcontext1.xml");

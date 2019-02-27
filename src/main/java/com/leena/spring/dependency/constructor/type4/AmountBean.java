@@ -13,7 +13,7 @@ public class AmountBean {
 
     public void displayValue() {
 
-        System.out.println("amount - " + amount);
-        System.out.println("year - " + year);
+        System.out.println("Amount is - " + amount);
+        System.out.println("Year is - " + year);
     }
 }
