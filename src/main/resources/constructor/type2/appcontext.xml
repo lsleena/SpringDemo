@@ -4,11 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
     <!-- defining CashPayment bean -->
-    <bean id="cashPaymentBean" class="com.leena.spring.dependency.constructor.CashPayment" />
-
+    <bean id="cashPaymentBean" class="com.leena.spring.dependency.constructor.type2.CashPayment" />
+    <bean id="creditPaymentBean" class="com.leena.spring.dependency.constructor.type2.CreditPayment" />
     <!-- Defining PayServiceImpl bean and injecting payment bean -->
-    <bean id="paymentBean" class="com.leena.spring.dependency.constructor.PayServiceImpl">
+    <bean id="paymentBean" class="com.leena.spring.dependency.constructor.type2.PayServiceImpl">
+        <constructor-arg ref="creditPaymentBean" />
         <constructor-arg ref="cashPaymentBean" />
-        <constructor-arg value="20" />
     </bean>
 </beans>

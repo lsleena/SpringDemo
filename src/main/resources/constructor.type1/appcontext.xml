@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- defining CashPayment bean -->
+    <bean id="cashPaymentBean" class="com.leena.spring.dependency.constructor.type1.CashPayment" />
+
+    <!-- Defining PayServiceImpl bean and injecting payment bean -->
+    <bean id="paymentBean" class="com.leena.spring.dependency.constructor.type1.PayServiceImpl">
+        <constructor-arg ref="cashPaymentBean" />
+        <constructor-arg value="20" />
+    </bean>
+</beans>

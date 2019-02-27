@@ -1,4 +1,4 @@
-package com.leena.spring.dependency.constructor;
+package com.leena.spring.dependency.constructor.type1;
 
 
 public class CashPayment implements IPayment{
