@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="itemBean" class="com.leena.spring.wirecollection.Item">
+        <property name="itemName" value="Laptop"/>
+        <property name="price" value="2000"/>
+    </bean>
+    <bean id="orderMapBean" class="com.leena.spring.wirecollection.OrderMap">
+        <property name="id" value="1"/>
+        <property name="itemMap">
+            <map>
+                <entry key="1" value-ref="itemBean"/>
+                <entry key="2">
+                    <bean class="com.leena.spring.wirecollection.Item">
+                        <property name="itemName" value="RAM"/>
+                        <property name="price" value="60.99"/>
+                    </bean>
+                </entry>
+            </map>
+        </property>
+        <property name="itemProp">
+            <props>
+                <prop key="Laptop">500</prop>
+                <prop key="RAM">100</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
