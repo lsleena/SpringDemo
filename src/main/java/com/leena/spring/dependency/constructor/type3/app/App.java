@@ -18,6 +18,11 @@ public class App {
 
         IPayService bean = (IPayService) context.getBean("paymentBean");
         bean.performPayment();
+        System.out.println(bean);
+        IPayService bean1 = (IPayService) context.getBean("paymentBean");
+        bean1.performPayment();
+        System.out.println(bean1);
         context.close();
+
     }
 }
