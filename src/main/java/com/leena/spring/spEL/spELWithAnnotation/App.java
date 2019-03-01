@@ -9,6 +9,7 @@ public class App {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext
                 ("spEL/appcontext2.xml");
 
+
         Employee emp = (Employee)context.getBean("employee");
 
         System.out.println("\nInside Spring Expression Langauge with Annotation Example : \n ");

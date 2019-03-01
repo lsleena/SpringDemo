@@ -8,7 +8,6 @@ public class App {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext
                 ("spEL/appcontext1.xml");
-
         Employee emp = (Employee)context.getBean("employee");
         System.out.println("Office address " + emp.getOfficeAddress().getNumber());
         System.out.println("Location of office " + emp.getOfficeLocation());

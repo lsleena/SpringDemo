@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component("employee")
 public class Employee {
+
     @Value("1001")
     private long empId;
     @Value("Ram")

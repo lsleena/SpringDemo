@@ -22,6 +22,7 @@ public class Employee {
         return empId;
     }
 
+
     public void setEmpId(long empId) {
 
         this.empId = empId;

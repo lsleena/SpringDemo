@@ -59,11 +59,9 @@ public class Address {
         this.pinCode = pinCode;
     }
 
-
     public String getAddress(String empName) {
 
         return empName + " works at " + number + ", " + street + ", " + city
                 + ", " + state + ", " + pinCode;
     }
-
 }

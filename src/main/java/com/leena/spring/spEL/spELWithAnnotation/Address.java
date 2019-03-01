@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component("officeAddress")
 public class Address {
+
     @Value("101")
     private String number;
     @Value("#{'M I Road'}")
