@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="officeAddress" class="com.leena.spring.spEL.Address">
+        <property name="number" value = "101" />
+        <property name="street" value = "#{'M I Road'}" />
+        <property name="city" value = "Jaipur" />
+        <property name="state" value = "Rajasthan" />
+        <property name="pinCode" value = "#{'302001'}" />
+    </bean>
+
+    <bean id="employee" class="com.leena.spring.spEL.Employee">
+        <property name="empId" value = "1001" />
+        <property name="empName" value = "Ram" />
+        <!--  Bean reference through SpEL -->
+        <property name="officeAddress" value = "#{officeAddress}" />
+        <property name="officeLocation" value = "#{officeAddress.city}" />
+        <!--  Method invocation through SpEL -->
+        <property name="employeeInfo" value = "#{officeAddress.getAddress('Ram')}" />
+    </bean>
+
+</beans>
