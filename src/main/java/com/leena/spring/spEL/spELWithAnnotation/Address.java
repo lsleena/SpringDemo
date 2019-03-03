@@ -10,9 +10,9 @@ public class Address {
     private String number;
     @Value("#{'M I Road'}")
     private String street;
-    @Value("Jaipur")
+    @Value("JaipurCity")
     private String city;
-    @Value("Rajasthan")
+    @Value("RajasthanState")
     private String state;
     @Value("#{'302001'}")
     private String pinCode;
