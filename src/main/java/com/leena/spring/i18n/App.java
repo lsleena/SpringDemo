@@ -9,7 +9,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext
                 ("i18n/appcontext1.xml");
         System.out.println("date format msg " + context.getMessage(
                 "dateformat", null, Locale.UK));
@@ -17,7 +17,7 @@ public class App {
         System.out.println("date format msg " + context.getMessage("dateformat", null, Locale.US));
 
                 System.out.println("Name error msg " + context.getMessage("argument.required",
-                        new Object[]{"{US Name}"}, Locale.US));
+                        new Object[]{"{US Name}","Leena"}, Locale.US));
         System.out.println("Name error msg " + context.getMessage("argument.required",
                 new Object[]{"{GERMANY NAME}"}, Locale.GERMANY));
 

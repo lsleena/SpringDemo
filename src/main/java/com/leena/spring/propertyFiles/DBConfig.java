@@ -6,6 +6,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
+
+/*
+If you want to load test.properties file and want to ignore the resource if not found then you can do it as -
+@Configuration
+@PropertySource(value="classpath:config/test.properties", ignoreResourceNotFound=true)
+ */
 @Configuration
 @PropertySource("classpath:config/db.properties")
 public class DBConfig {
