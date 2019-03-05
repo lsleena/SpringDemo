@@ -23,6 +23,8 @@
     <properties>
         <spring.version>5.0.6.RELEASE</spring.version>
         <xbean-spring.version>3.5</xbean-spring.version>
+        <mysql-connector.version>5.1.39</mysql-connector.version>
+        <spring-framework.version>2.5.6</spring-framework.version>
     </properties>
 
     <dependencies>
@@ -49,14 +51,14 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
-            <version>2.5.6</version>
+            <version>${spring-framework.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>2.5.6</version>
+            <version>${spring-framework.version}</version>
         </dependency>
 
         <dependency>
@@ -76,7 +78,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.39</version>
+            <version>${mysql-connector.version}</version>
         </dependency>
 
     </dependencies>

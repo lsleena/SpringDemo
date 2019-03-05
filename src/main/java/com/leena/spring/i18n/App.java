@@ -17,9 +17,9 @@ public class App {
         System.out.println("date format msg " + context.getMessage("dateformat", null, Locale.US));
 
                 System.out.println("Name error msg " + context.getMessage("argument.required",
-                        new Object[]{"Name"}, Locale.US));
+                        new Object[]{"{US Name}"}, Locale.US));
         System.out.println("Name error msg " + context.getMessage("argument.required",
-                new Object[]{"Name"}, Locale.GERMANY));
+                new Object[]{"{GERMANY NAME}"}, Locale.GERMANY));
 
         context.close();
     }

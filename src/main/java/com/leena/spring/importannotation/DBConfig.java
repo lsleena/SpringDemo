@@ -13,7 +13,7 @@ import org.springframework.core.env.Environment;
 @Import({EmpConfig.class, JDBCConfig.class})
 public class DBConfig {
 
-    @Autowired
+   /* @Autowired
     private Environment env;
 
     @Bean
@@ -25,5 +25,5 @@ public class DBConfig {
         ds.setUsername(env.getProperty("db.username"));
         ds.setPassword(env.getProperty("db.password"));
         return ds;
-    }
+    }*/
 }

@@ -15,7 +15,7 @@ public class TestService implements MessageSourceAware {
     }
     public void displayMessage(){
 
-        System.out.println("Name error msg " + messageSource.getMessage("argument.required", new Object[]{"Name"}, Locale.US));
-                System.out.println("Name error msg " + messageSource.getMessage("argument.required", new Object[]{"Name"}, Locale.GERMANY));
+        System.out.println("Name error msg " + messageSource.getMessage("argument.required", new Object[]{"Name ...."}, Locale.US));
+                System.out.println("Name error msg " + messageSource.getMessage("argument.required", new Object[]{"Name...."}, Locale.GERMANY));
     }
 }
