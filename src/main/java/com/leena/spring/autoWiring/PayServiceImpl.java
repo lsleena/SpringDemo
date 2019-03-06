@@ -5,14 +5,18 @@ public class PayServiceImpl implements IPayService {
     private IPayment payment;
     private int amount;
 
-    // Constructor
-    PayServiceImpl(IPayment payment){
-        this.payment = payment;
-    }
-
     public void performPayment() {
         // calling payment class executePayment method
         payment.executePayment(amount);
+    }
+
+    public IPayment getPayment() {
+        return payment;
+    }
+
+
+    public void setPayment(IPayment payment) {
+        this.payment = payment;
     }
 
     public int getAmount() {
@@ -22,4 +26,5 @@ public class PayServiceImpl implements IPayService {
     public void setAmount(int amount) {
         this.amount = amount;
     }
+
 }
