@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- use of context:annotation -->
+    <context:annotation-config/>
+
+    <bean id="cashPaymentBean" class="com.leena.spring.autoWiring.usingAutowired.CashPayment1" />
+
+    <!-- Defining PayServiceImpl bean and injecting payment bean but no prperty due to autowire -->
+    <bean id="paymentBean" class="com.leena.spring.autoWiring.usingAutowired.PayServiceImplForContructor">
+        <!-- <property name="payment" ref="cashPaymentBean" /> -->
+    </bean>
+</beans>
