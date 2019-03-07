@@ -12,10 +12,10 @@
     <!-- use of context:annotation -->
     <context:annotation-config/>
 
-    <bean id="cashPaymentBean" class="com.leena.spring.autoWiring.usingAutowired.CashPayment" />
+    <bean id="cashPaymentBean" class="com.leena.spring.autoWiring.usingAutowired.CashPayment1" />
 
     <!-- Defining PayServiceImpl bean and injecting payment bean but no prperty due to autowire -->
-    <bean id="paymentBean" class="com.leena.spring.autoWiring.usingAutowired.PayServiceImpl">
+    <bean id="paymentBean" class="com.leena.spring.autoWiring.usingAutowired.PayServiceImpl1">
         <!-- <property name="payment" ref="cashPaymentBean" /> -->
     </bean>
 </beans>
