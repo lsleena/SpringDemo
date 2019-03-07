@@ -5,13 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd" default-autowire="byType">
 
-   <!-- primary candidate - Identify a primary candidate for auto wiring bean and set that as primary="true" -->
+    <!-- primary candidate - Identify a primary candidate for auto wiring bean and set that as primary="true" -->
     <bean id="payment" class="com.leena.spring.autoWiring.CashPayment" primary="true"/>
 
-    <bean id="payServiceBean" class="com.leena.spring.autoWiring.PayServiceImpl" autowire="byType">
+    <bean id="payServiceBean" class="com.leena.spring.autoWiring.PayServiceImplC" autowire="constructor">
         <property name="amount" value="20" />
     </bean>
     <!--   Exclude a bean from autowiring - You can exclude a bean from being autowired. For that set the autowire-candidate attribute of <bean> tag to false. -->
-   <bean id="creditPayment" class="com.leena.spring.autoWiring.CreditPayment" autowire-candidate="false" />
+    <bean id="creditPayment" class="com.leena.spring.autoWiring.CreditPayment" autowire-candidate="false" />
 </beans>
 

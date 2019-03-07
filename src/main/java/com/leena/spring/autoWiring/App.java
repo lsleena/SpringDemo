@@ -4,9 +4,7 @@ package com.leena.spring.autoWiring;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-/*
-Known ERROR
- */
+
 public class App {
 
     public static void main(String[] args) {
