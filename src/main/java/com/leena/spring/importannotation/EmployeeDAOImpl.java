@@ -10,11 +10,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     final String INSERT_QUERY = "insert into emp1 (ename) values (:ename)";
 
     public EmployeeDAOImpl(NamedParameterJdbcTemplate namedJdbcTemplate){
+
         this.namedJdbcTemplate = namedJdbcTemplate;
     }
 
     @Override
     public int save(Employee employee) {
+
         // Creating map with all required params
         Map<String, Object> paramMap = new HashMap<String, Object>();
         paramMap.put("ename", employee.getEmpName());
