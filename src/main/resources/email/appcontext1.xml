@@ -7,13 +7,15 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="org.netjs.programs" />
+    <context:component-scan base-package="com.leena.spring.email" />
 
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-        <property name="host" value="smtp.gmail.com"/>
+        <property name="host" value="smtp.sendgrid.net"/>
         <property name="port" value="587"/>
-        <property name="username" value="GMAIL_USER_NAME"/>
-        <property name="password" value="PASSWORD"/>
+        <property name="username" value="leenaspatil"/>
+        <property name="password" value="@Samarth1a"/>
+
+
         <property name="javaMailProperties">
             <props>
                 <prop key="mail.transport.protocol">smtp</prop>
@@ -24,8 +26,8 @@
         </property>
     </bean>
     <bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage">
-        <property name="from" value="FROM@gmail.com"/>
-        <property name="to" value="TO@gmail.com"/>
+        <property name="from" value="lsleena@gmail.com"/>
+        <property name="to" value="lsleena@gmail.com"/>
         <property name="subject" value="Test Message"/>
     </bean>
 </beans>
