@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext
-                ("appcontext.xml");
+                ("jdbc/appcontext2.xml");
         EmployeeDAO dao = (EmployeeDAO)context.getBean("employeeDAOImpl");
         // finding by ID
         Employee emp = dao.findEmployee(5);
