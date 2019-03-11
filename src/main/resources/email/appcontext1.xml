@@ -13,7 +13,7 @@
         <property name="host" value="smtp.sendgrid.net"/>
         <property name="port" value="587"/>
         <property name="username" value="leenaspatil"/>
-        <property name="password" value="@Samarth1a"/>
+        <property name="password" value=""/>
 
 
         <property name="javaMailProperties">
