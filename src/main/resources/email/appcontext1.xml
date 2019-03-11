@@ -13,7 +13,7 @@
         <property name="host" value="smtp.sendgrid.net"/>
         <property name="port" value="587"/>
         <property name="username" value="leenaspatil"/>
-        <property name="password" value="@Samarth1a"/>
+        <property name="password" value=""/>
 
 
         <property name="javaMailProperties">
@@ -27,7 +27,7 @@
     </bean>
     <bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage">
         <property name="from" value="lsleena@gmail.com"/>
-        <property name="to" value="lsleena@gmail.com"/>
-        <property name="subject" value="Test Message"/>
+        <property name="to" value="leena.patil@kwartile.com"/>
+        <property name="subject" value="Test Message From Leena Patil"/>
     </bean>
 </beans>

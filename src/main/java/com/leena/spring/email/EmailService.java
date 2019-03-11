@@ -8,20 +8,25 @@ import org.springframework.mail.SimpleMailMessage;
 
 @Service
 public class EmailService {
+
     @Autowired
     private SimpleMailMessage templateMessage;
     @Autowired
     private MailSender mailSender;
 
     public void sendMail() {
+
         SimpleMailMessage msg = new SimpleMailMessage(this.templateMessage);
         //msg.setTo(to);
         //Setting mail text
-        msg.setText("This is a test mail sent through Spring framework");
+        msg.setText("This is a second test mail sent through Spring framework from SpringDemo Project");
+
         try{
+
             this.mailSender.send(msg);
         }
         catch (MailException ex) {
+
             // just printing
             System.out.println(ex.getMessage());
         }
